@@ -35,9 +35,15 @@ public class Main {
     }
 
     private static void listarClientes(List<Entities> lista) {
-        System.out.println("Registros: ");
-        for (Entities clientes : lista) {
-            System.out.println("#" + (lista.indexOf(clientes) + 1) + " - " + clientes);
+
+        if (!lista.isEmpty()) {
+            System.out.println("Registros: ");
+
+            for (Entities clientes : lista) {
+                System.out.println("#" + (lista.indexOf(clientes) + 1) + " - " + clientes);
+            }
+        }else{
+            System.out.println("Nenhum registro encontrado!");
         }
     }
 
